@@ -137,6 +137,9 @@ export default {
       this.$refs.suggestionInput.$el.classList.remove("margin-red");
       this.enableSaveButton = true;
     },
+    disableLoading() {
+      this.enableSaveButton = true;
+    },
     showLoading() {
       return !this.enableSaveButton;
     },

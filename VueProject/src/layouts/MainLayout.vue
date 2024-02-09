@@ -135,7 +135,7 @@
           <q-list>
             <q-item class="q-mb-md" v-if="showItem('Objetivo')">
               <div class="item-content">
-                <q-icon name="thumb_down" color="pink-6" class="info-icon" />
+                <q-icon name="thumb_down" color="purple" class="info-icon" />
 
                 <div>
                   Você sabia que as reuniões podem ser uma grande fonte de
@@ -177,6 +177,27 @@
                 </div>
               </div>
             </q-item>
+            <q-item class="q-mb-md" v-if="showItem('Objetivo')">
+              <div class="item-content">
+                <q-icon name="smart_display" color="red" class="info-icon" />
+
+                <div style="width: 100%">
+                  Quer saber como usar a ferramenta? Assista o vídeo abaixo e
+                  veja como é simples usar o MONETOMETRO.
+                  <br /><br />
+                  <iframe
+                    width="100%"
+                    height="450px"
+                    src="https://www.youtube.com/embed/iDJxbVTu7tg?si=bgBF_AVlo7_LivCN"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </q-item>
+
             <q-item class="q-mb-md" v-if="showItem('Funcionamento')"
               ><div class="item-content">
                 <q-icon
@@ -834,9 +855,16 @@ export default defineComponent({
             this.$refs.refSuggestion.clearSuggestion();
             this.infoDialogOpen = false;
           } else this.showMessage(response.data.message, "negative");
+
+          this.$refs.refSuggestion.disableLoading();
         })
         .catch((error) => {
-          console.error("Error on saving suggestion:", error);
+          //console.error("Error on saving suggestion:", error);
+          this.showMessage(
+            "Ocorreu um erro na solicitação. Tente novamente mais tarde.",
+            "negative"
+          );
+          this.$refs.refSuggestion.disableLoading();
         });
     },
   },

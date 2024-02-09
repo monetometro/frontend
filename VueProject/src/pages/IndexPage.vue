@@ -259,6 +259,15 @@ export default {
   font-size: 12px;
   padding: 20px 0 0;
 }
+
+@media screen and (max-width: 400px) {
+  .date {
+    font-size: 4vw; /* Ajuste o valor conforme necessário */
+  }
+  .time {
+    font-size: 10vw;
+  }
+}
 .qdialog {
   position: fixed;
   top: 40%;

@@ -385,7 +385,6 @@ export default {
     },
 
     save() {
-      this.loadingButton = true;
       this.updateParticipants();
 
       if (!(this.token.length > 0)) this.verified = false;
@@ -408,7 +407,8 @@ export default {
           "negative"
         );
         this.$refs.appRef.classList.add("margin-red");
-      } else
+      } else {
+        this.loadingButton = true;
         this.store
           .getAPI()
           .postEvent(this.token, this.participants, this.DTI, this.DTE)
@@ -440,6 +440,7 @@ export default {
           .catch((error) => {
             console.error("Error on saving event:", error);
           });
+      }
     },
   },
   mounted() {
