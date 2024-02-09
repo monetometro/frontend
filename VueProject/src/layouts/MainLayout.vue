@@ -622,8 +622,12 @@
                   <span>
                     Se você é desenvolvedor e quer colaborar incluindo novas
                     fontes de dados públicos acesse a página do projeto no
+<<<<<<< HEAD
                     <a target="_blank" href="https://github.com/monetometro"
                       >GitHub</a
+=======
+                    <a href="https://github.com/monetometro">GitHub</a
+>>>>>>> baddb86ed4c9580491bf6b02234b644face01304
                     >.
                   </span>
                 </div>
