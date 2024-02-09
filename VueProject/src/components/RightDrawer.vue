@@ -392,7 +392,7 @@ export default {
       else this.verified = true;
 
       var duringNow = this.DTE - this.DTI;
-      if (Math.abs(duringNow) <= 0)
+      if (this.DTE < this.DTI || Math.abs(duringNow) <= 0)
         this.showMessage(
           "Informe o período do evento!<br/>DTE precisa ser uma data maior que DTI. ",
           "negative"
