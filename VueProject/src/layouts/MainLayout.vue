@@ -493,9 +493,8 @@
                             dense
                             icon="credit_card"
                             size="18pt"
-                            @click="
-                              toggleInfoDialog('Objetivo', 'info_outline')
-                            "
+                            href="https://www.kickante.com.br/financiamento-coletivo/monetometro/pagamento"
+                            target="_blank"
                             style="position: relative"
                           >
                             <div
@@ -511,9 +510,8 @@
                             dense
                             icon="fa-solid fa-barcode"
                             size="18pt"
-                            @click="
-                              toggleInfoDialog('Objetivo', 'info_outline')
-                            "
+                            href="https://www.kickante.com.br/financiamento-coletivo/monetometro/pagamento"
+                            target="_blank"
                             style="position: relative"
                           >
                             <div
@@ -527,9 +525,8 @@
                             dense
                             icon="qr_code_2"
                             size="18pt"
-                            @click="
-                              toggleInfoDialog('Objetivo', 'info_outline')
-                            "
+                            href="https://www.kickante.com.br/financiamento-coletivo/monetometro/pagamento?action=securePix"
+                            target="_blank"
                             style="position: relative"
                           >
                             <div
@@ -568,6 +565,7 @@
                             icon="fa-brands fa-bitcoin"
                             size="18pt"
                             style="position: relative"
+                            href="bitcoin:14m3UeajUTrqgsb3nHV9PaV6U7EocfbLRo?amount="
                           >
                             <div class="footer-div">Bitcoin</div>
                           </q-btn>
@@ -622,12 +620,8 @@
                   <span>
                     Se você é desenvolvedor e quer colaborar incluindo novas
                     fontes de dados públicos acesse a página do projeto no
-<<<<<<< HEAD
                     <a target="_blank" href="https://github.com/monetometro"
                       >GitHub</a
-=======
-                    <a href="https://github.com/monetometro">GitHub</a
->>>>>>> baddb86ed4c9580491bf6b02234b644face01304
                     >.
                   </span>
                 </div>
@@ -955,7 +949,7 @@ p {
     width: 300px;
   }
 }
-.margin-r-25 button {
+.margin-r-25 a {
   margin-right: 25px;
 }
 .pay-qr-img {
