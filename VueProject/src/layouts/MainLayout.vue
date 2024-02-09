@@ -622,7 +622,7 @@
                   <span>
                     Se você é desenvolvedor e quer colaborar incluindo novas
                     fontes de dados públicos acesse a página do projeto no
-                    <a href="https://github.com/stgustavo/monetometro">GitHub</a
+                    <a href="https://github.com/monetometro">GitHub</a
                     >.
                   </span>
                 </div>
