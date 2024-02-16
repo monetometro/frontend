@@ -172,6 +172,10 @@ export default {
     const DTE = ref(new Date(route.query.DTE ? route.query.DTE : now));
     const CMH = ref(parseFloat(route.query.CMH ?? 0) || 0); // Garante que CMH seja um número
 
+    const participants = ref(
+      route.query.ATT ? JSON.parse(decodeURIComponent(route.query.ATT)) : []
+    );
+
     const loading = ref(false);
     const verified = ref(false);
     const loadingButton = ref(false);
@@ -184,12 +188,12 @@ export default {
       token: "",
       sitekey,
       verified,
-      showMessage(message, colorName) {
+      showMessage(message, colorName, noTimeout) {
         $q.notify({
           message: message,
           color: colorName || "positive",
           position: "top-right",
-          timeout: 5000,
+          timeout: noTimeout ? 0 : 5000,
           progress: true,
           html: true,
           icon:
@@ -200,6 +204,7 @@ export default {
               : colorName == "warning"
               ? "warning"
               : "announcement",
+          textColor: colorName == "warning" ? "black" : "white",
           actions: [
             {
               label: "X",
@@ -215,9 +220,7 @@ export default {
         email: "",
         value: 0,
       }),
-      participants: ref(
-        route.query.ATT ? JSON.parse(decodeURIComponent(route.query.ATT)) : []
-      ),
+      participants,
       pagination: { sortBy: "email", descending: false },
       columns: [
         {
@@ -382,6 +385,7 @@ export default {
         // Caso não haja participantes, o CMH é 0
         this.CMH = 0;
       }
+      this.store.parameters.CMH = this.CMH;
     },
 
     save() {
@@ -444,6 +448,14 @@ export default {
     },
   },
   mounted() {
+    if (this.participants.some((el) => el.value == 0)) {
+      this.showMessage(
+        "Existem participantes sem RMM informado, isso impactará o custo médio apresentado. Verifique os detalhes do evento!",
+        "warning",
+        true
+      );
+    }
+
     this.calcularCMH();
   },
 };

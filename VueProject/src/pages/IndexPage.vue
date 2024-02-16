@@ -262,10 +262,16 @@ export default {
 
 @media screen and (max-width: 400px) {
   .date {
-    font-size: 4vw; /* Ajuste o valor conforme necessário */
+    font-size: 3vw;
   }
   .time {
-    font-size: 10vw;
+    font-size: 8vw;
+  }
+  .money-text {
+    font-size: 20vw;
+  }
+  .money-text #msg {
+    font-size: 4vw;
   }
 }
 .qdialog {

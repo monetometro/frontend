@@ -189,7 +189,7 @@
                     width="100%"
                     height="450px"
                     src="https://www.youtube.com/embed/iDJxbVTu7tg?si=bgBF_AVlo7_LivCN"
-                    title="YouTube video player"
+                    title="Primeiros Passos no Monetometro"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
@@ -354,6 +354,20 @@
                     evento no MONETOMETRO, no dia e hora do evento acesse o link
                     para acompanhar em tempo real o custo dele.
                   </p>
+                  <div class="dvYtb">
+                    Assista o vídeo abaixo e veja como é fácil incluir o
+                    Monetometro no planejamento do seu evento.
+                    <br /><br />
+                    <iframe
+                      width="100%"
+                      height="450px"
+                      src="https://www.youtube.com/embed/ipy0I9F17CY?si=IbURhQrLZ3xxZGLd"
+                      title="Incluindo o Monetometro no seu planejamento"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </q-item>
@@ -566,6 +580,7 @@
                           <a
                             href="https://www.kickante.com.br/financiamento-coletivo/monetometro"
                             target="_blank"
+                            style="margin-right: 0px"
                           >
                             Kickante</a
                           >, clique em um dos métodos acima para ir para a
@@ -985,5 +1000,10 @@ p {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+.dvYtb {
+  min-width: 300px;
+  max-width: 900px;
+  width: 100%;
 }
 </style>
